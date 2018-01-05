@@ -56,8 +56,7 @@ export class Column extends Component { // eslint-disable-line react/require-ren
       PropTypes.func
     ]).isRequired,
     format: PropTypes.string,
-    width: PropTypes.number,
-    key: PropTypes.string
+    width: PropTypes.number
   }
 
   render () {
