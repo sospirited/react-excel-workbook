@@ -56,7 +56,8 @@ export class Column extends Component { // eslint-disable-line react/require-ren
       PropTypes.func
     ]).isRequired,
     format: PropTypes.string,
-    width: PropTypes.number
+    width: PropTypes.number,
+    key: PropTypes.string
   }
 
   render () {
@@ -73,9 +74,6 @@ export class Sheet extends Component { // eslint-disable-line react/require-rend
     ]).isRequired,
     children: PropTypes.arrayOf((propValue, key) => {
       const type = propValue[key].type
-      if (type !== Column) {
-        throw new Error('<Sheet> can only have <Column>\'s as children. ')
-      }
     }).isRequired
   }
 
