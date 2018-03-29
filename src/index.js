@@ -111,9 +111,10 @@ export class Workbook extends Component {
       const sheetRow = []
       React.Children.forEach(columns, column => {
         const getValue = typeof (column.props.value) === 'function' ? column.props.value : row => row[column.props.value]
-        const value = getValue(row) || ''
+        const rowValue = getValue(row)
+        const value = rowValue !== undefined ? rowValue : ''
         const format = column.props.format || ''
-        sheetRow.push({ value, format })
+        sheetRow.push({value, format})
       })
       sheetData.push(sheetRow)
     })
