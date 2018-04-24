@@ -1,6 +1,10 @@
 {
   "name": "react-excel-workbook",
+<<<<<<< HEAD
   "version": "0.0.4-custom",
+=======
+  "version": "0.0.5-custom",
+>>>>>>> remotes/harry/master
   "description": "An downloadable excel workbook react component",
   "main": "lib/index.js",
   "scripts": {
