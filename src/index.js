@@ -91,7 +91,8 @@ export class Workbook extends Component {
           throw new Error('<Workbook> can only have <Sheet>\'s as children. ')
         }
       })
-    }
+    },
+    onClick: PropTypes.func
   }
 
   constructor (props) {
@@ -137,8 +138,9 @@ export class Workbook extends Component {
   }
 
   render () {
+    const onClickHandler = this.props.onClick || this.download;
     return (
-      <span onClick={this.download}>
+      <span onClick={onClickHandler}>
         {this.props.element ? this.props.element : "Download"}
       </span>
     )
